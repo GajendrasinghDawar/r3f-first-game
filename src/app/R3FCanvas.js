@@ -4,6 +4,7 @@ import { Canvas } from "@react-three/fiber"
 import { KeyboardControls } from "@react-three/drei"
 
 import MyGame from "@components/MyGame"
+import Interface from "@/components/Interface"
 
 export default function R3FCanvas() {
   const Controls = {
@@ -26,15 +27,16 @@ export default function R3FCanvas() {
     >
       <Canvas
         shadows
-        camera={{
-          fov: 45,
-          near: 0.1,
-          far: 200,
-          position: [2.5, 4, 6],
-        }}
+        // camera={{
+        //   fov: 45,
+        //   near: 0.1,
+        //   far: 200,
+        //   position: [2.5, 4, 6],
+        // }}
       >
         <MyGame />
       </Canvas>
+      <Interface />
     </KeyboardControls>
   )
 }
